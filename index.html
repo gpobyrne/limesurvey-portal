@@ -90,9 +90,42 @@
       margin-bottom: 1.5rem;
     }
 
+    .sidebar-button,
+    .sidebar-button-secondary {
+      display: block;
+      margin: 0.75rem 0;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .sidebar-button {
+      background: var(--accent);
+      color: #ffffff !important;
+      box-shadow: 0 8px 20px rgba(0, 87, 184, 0.22);
+    }
+
+    .sidebar-button:hover {
+      background: var(--link-hover);
+      text-decoration: none;
+    }
+
+    .sidebar-button-secondary {
+      background: #ffffff;
+      color: var(--accent);
+      border: 1px solid var(--sidebar-border);
+    }
+
+    .sidebar-button-secondary:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
     .summary {
       list-style: none;
-      margin: 0;
+      margin: 1.5rem 0 0 0;
       padding: 0;
     }
 
@@ -129,23 +162,6 @@
       letter-spacing: 0.08em;
       color: var(--muted);
       font-weight: 700;
-    }
-
-    .sidebar-button {
-      display: block;
-      margin: 1.5rem 0;
-      padding: 0.8rem 1rem;
-      background: var(--accent);
-      color: #ffffff !important;
-      text-align: center;
-      border-radius: 8px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(0, 87, 184, 0.22);
-    }
-
-    .sidebar-button:hover {
-      background: var(--link-hover);
-      text-decoration: none;
     }
 
     .book-body {
@@ -185,6 +201,7 @@
       box-shadow: var(--shadow);
       background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
       margin-bottom: 3rem;
+      text-align: center;
     }
 
     .hero h1 {
@@ -202,18 +219,23 @@
 
     .hero p {
       font-size: 1.08rem;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .actions {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
-      margin-top: 1.5rem;
+      margin-top: 1.75rem;
     }
 
     .button {
       display: inline-block;
-      padding: 0.85rem 1.1rem;
+      padding: 0.9rem 1.35rem;
       border-radius: 9px;
       font-weight: 700;
       border: 1px solid transparent;
@@ -227,17 +249,6 @@
     .button-primary:hover {
       background: var(--link-hover);
       color: #ffffff;
-      text-decoration: none;
-    }
-
-    .button-secondary {
-      border-color: var(--border);
-      color: var(--link);
-      background: #ffffff;
-    }
-
-    .button-secondary:hover {
-      border-color: var(--link);
       text-decoration: none;
     }
 
@@ -281,32 +292,6 @@
       border-radius: 5px;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 0.92em;
-    }
-
-    .link-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .link-card {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.1rem;
-      background: #ffffff;
-    }
-
-    .link-card h3 {
-      margin-top: 0;
-      margin-bottom: 0.35rem;
-      font-size: 1.1rem;
-    }
-
-    .link-card p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
     }
 
     .footer-nav {
@@ -365,7 +350,19 @@
       <p class="subtitle">Documentation and access point for the LimeSurvey instance.</p>
 
       <a class="sidebar-button" href="https://livesurvey.uhl-research.site">
-        Open LimeSurvey
+        Open Survey
+      </a>
+
+      researchers.html
+        Researchers
+      </a>
+
+      CSAR-AI_PIL.pdf
+        📄 View participant info leaflet
+      </a>
+
+      privacy-policy.html
+        Privacy Policy
       </a>
 
       <nav role="navigation" aria-label="Table of contents">
@@ -387,21 +384,7 @@
           </li>
 
           <li>
-            #technical-notesTechnical notes</a>
-          </li>
-
-          <li>
             #supportSupport</a>
-          </li>
-
-          <li class="section-label">External links</li>
-
-          <li>
-            <a href="https://livesurvey.uhl-research.site">LimeSurvey instance</a>
-          </li>
-
-          <li>
-            <a href="https://gpobyrne.github.io/limesurvey-portal/">GitHub Pages URL</a>
           </li>
         </ul>
       </nav>
@@ -423,24 +406,18 @@
             </p>
 
             <p>
-              This portal provides documentation and access for the UHL Research
-              LimeSurvey instance. The public documentation is hosted on GitHub Pages,
-              while the survey application itself is hosted separately on iFastNet.
+              This portal provides access to the UHL Research LimeSurvey study
+              and related participant information.
             </p>
 
             <p>
-              LimeSurvey requires PHP, MySQL or MariaDB, and server-side processing,
-              so the live survey platform is available at
-              <code>livesurvey.uhl-research.site</code>.
+              Please review the participant information leaflet before proceeding
+              to the survey.
             </p>
 
             <div class="actions">
               <a class="button button-primary" href="https://livesurvey.uhl-research.site">
-                Open the survey
-              </a>
-
-              #participant-information
-                Read participant information
+                Open Survey
               </a>
             </div>
           </div>
@@ -449,20 +426,13 @@
             <h2>Take the survey</h2>
 
             <p>
-              To access the current survey platform, use the button below.
-              You will be taken to the live LimeSurvey instance.
-            </p>
-
-            <p>
-              <a class="button button-primary" href="https://livesurvey.uhl-research.site">
-                Go to LimeSurvey
-              </a>
+              When you are ready, use the button above or the sidebar link to open
+              the live LimeSurvey questionnaire.
             </p>
 
             <div class="callout">
-              <strong>Direct link:</strong>
-              <br>
-              <code>https://livesurvey.uhl-research.site</code>
+              <strong>Before continuing:</strong>
+              please read the participant information leaflet and privacy policy.
             </div>
           </section>
 
@@ -470,20 +440,16 @@
             <h2>Participant information</h2>
 
             <p>
-              Before completing a survey, please read the information provided
-              on the first page of the LimeSurvey questionnaire. That page should
-              explain the purpose of the survey, who is running it, what information
-              is being collected, and how your responses will be used.
+              The participant information leaflet explains the purpose of the study,
+              what participation involves, the voluntary nature of participation,
+              and how anonymised data will be handled.
             </p>
 
-            <h3>General guidance</h3>
-
-            <ul>
-              <li>Use a modern browser such as Safari, Chrome, Edge, or Firefox.</li>
-              <li>Complete the survey in one sitting if possible.</li>
-              <li>Do not refresh or close the browser unless instructed.</li>
-              <li>If you receive a unique survey link, do not share it with others.</li>
-            </ul>
+            <p>
+              CSAR-AI_PIL.pdf
+                📄 Download the participant information leaflet
+              </a>
+            </p>
           </section>
 
           <section id="privacy-and-data">
@@ -491,7 +457,7 @@
 
             <p>
               Survey responses are collected through the LimeSurvey instance, not
-              through this GitHub Pages documentation site.
+              through this GitHub Pages portal.
             </p>
 
             <p>
@@ -502,63 +468,19 @@
 
             <div class="callout warning">
               <strong>Important:</strong>
-              All respondent data should remain inside the secured LimeSurvey hosting
+              all respondent data should remain inside the secured LimeSurvey hosting
               environment and should be exported, backed up, retained, or deleted
               according to the project data management plan.
             </div>
-          </section>
-
-          <section id="technical-notes">
-            <h2>Technical notes</h2>
-
-            <p>
-              The portal uses a split-hosting setup:
-            </p>
-
-            <div class="link-card-grid">
-              <div class="link-card">
-                <h3>Documentation site</h3>
-                <p>
-                  Hosted using GitHub Pages at
-                  <code>https://uhl-research.site</code>.
-                </p>
-              </div>
-
-              <div class="link-card">
-                <h3>LimeSurvey instance</h3>
-                <p>
-                  Hosted on iFastNet at
-                  <code>https://livesurvey.uhl-research.site</code>.
-                </p>
-              </div>
-
-              <div class="link-card">
-                <h3>Repository</h3>
-                <p>
-                  Static files are maintained in the
-                  <code>limesurvey-portal</code> GitHub repository.
-                </p>
-              </div>
-            </div>
-
-            <h3>Recommended repository structure</h3>
-
-            <pre><code>limesurvey-portal/
-├── index.html
-├── README.md
-└── CNAME</code></pre>
           </section>
 
           <section id="support">
             <h2>Support</h2>
 
             <p>
-              If the survey link does not open, try copying and pasting the direct
-              survey URL into your browser:
-            </p>
-
-            <p>
-              <code>https://livesurvey.uhl-research.site</code>
+              If you have questions about the study, please refer to the participant
+              information leaflet or contact the research team using the details
+              provided in that document.
             </p>
 
             <p class="small">
