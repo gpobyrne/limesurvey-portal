@@ -2,41 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Survey Portal</title>
+  <title>UHL Research Survey Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="2; url=https://livesurvey.uhl-research.site">
+
+  <meta name="description" content="UHL Research Survey Portal. Documentation and access point for the UHL Research LimeSurvey instance.">
+
+  <link rel="canonical" href="https://uhl-research.site/">
 
   <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --primary: #0057b8;
+      --primary-dark: #003f87;
+      --border: #d9e1ec;
+    }
+
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 720px;
-      margin: 4rem auto;
-      padding: 2rem;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      color: #222;
+    }
+
+    .wrap {
+      max-width: 820px;
+      margin: 4rem auto;
+      padding: 1.5rem;
     }
 
     .card {
-      border: 1px solid #ddd;
-      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
       padding: 2rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
     }
 
-    a {
-      color: #0057b8;
-      font-weight: 600;
+    h1 {
+      margin-top: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 1.05rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.85rem 1.15rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .button-secondary {
+      background: #ffffff;
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--primary);
+    }
+
+    .details {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    code {
+      background: #eef2f7;
+      padding: 0.15rem 0.35rem;
+      border-radius: 6px;
     }
   </style>
 </head>
+
 <body>
-  <main class="card">
-    <h1>Survey Portal</h1>
-    <p>You are being redirected to the survey platform.</p>
-    <p>
-      If you are not redirected automatically,
-      https://livesurvey.uhl-research.siteopen the survey here</a>.
-    </p>
+  <main class="wrap">
+    <section class="card">
+      <h1>UHL Research Survey Portal</h1>
+
+      <p>
+        Welcome to the UHL Research survey portal. This page provides access to
+        the current LimeSurvey instance and related project information.
+      </p>
+
+      <p class="muted">
+        The survey platform itself is hosted separately because LimeSurvey requires
+        PHP, MySQL/MariaDB, and server-side processing.
+      </p>
+
+      <div class="actions">
+        <a class="button button-primary" href="https://livesurvey.uhl-research.site">
+          Open the survey
+        </a>
+
+        <a class="button button-secondary" href="https://gpobyrne.github.io/limesurvey-portal/">
+          View GitHub Pages version
+        </a>
+      </div>
+
+      <section class="details">
+        <p>
+          Documentation site:
+          <br>
+          <code>https://uhl-research.site</code>
+        </p>
+
+        <p>
+          LimeSurvey instance:
+          <br>
+          <code>https://livesurvey.uhl-research.site</code>
+        </p>
+
+        <p>
+          If you experience issues opening the survey, copy and paste this link
+          into your browser:
+          <br>
+          <code>https://livesurvey.uhl-research.site</code>
+        </p>
+      </section>
+    </section>
   </main>
 </body>
 </html>
