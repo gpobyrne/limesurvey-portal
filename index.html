@@ -164,6 +164,11 @@
       margin: 1.5rem 0;
     }
 
+    .warning {
+      border-left-color: var(--warning-border);
+      background: var(--warning-bg);
+    }
+
     .study-info-table {
       width: 100%;
       border-collapse: collapse;
@@ -192,38 +197,6 @@
       border-bottom: none;
     }
 
-    @media (max-width: 640px) {
-      .study-info-table,
-      .study-info-table tbody,
-      .study-info-table tr,
-      .study-info-table th,
-      .study-info-table td {
-        display: block;
-        width: 100%;
-      }
-
-      .study-info-table th {
-        border-bottom: none;
-      }
-
-      .study-info-table td {
-        border-bottom: 1px solid var(--border);
-      }
-    }
-
-    .warning {
-      border-left-color: var(--warning-border);
-      background: var(--warning-bg);
-    }
-
-    .pdf-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-weight: 700;
-      margin-top: 0.5rem;
-    }
-
     .survey-action {
       text-align: center;
       margin: 2.5rem 0 1rem;
@@ -244,6 +217,25 @@
       background: var(--link-hover);
       color: #ffffff;
       text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .study-info-table,
+      .study-info-table tbody,
+      .study-info-table tr,
+      .study-info-table th,
+      .study-info-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .study-info-table th {
+        border-bottom: none;
+      }
+
+      .study-info-table td {
+        border-bottom: 1px solid var(--border);
+      }
     }
 
     @media (max-width: 860px) {
@@ -269,7 +261,6 @@
 
 <body>
   <div class="book">
-
     <aside class="book-summary" aria-hidden="true"></aside>
 
     <main class="book-body">
@@ -281,3 +272,132 @@
             <p class="date">Last updated: 15 June 2026</p>
           </div>
 
+          <table class="study-info-table">
+            <tbody>
+              <tr>
+                <th scope="row">Study title</th>
+                <td>
+                  A Comparative Study of the Accuracy and Reliability of Artificial Intelligence
+                  Large Language Models Versus Human Healthcare Workers in the Interpretation
+                  of Handwritten Medical Notes (CSAR-AI).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Study Ref</th>
+                <td>0392</td>
+              </tr>
+              <tr>
+                <th scope="row">Ethical Status</th>
+                <td>Approved by UHL Research Ethics Committee, 26 January 2026.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <section id="overview">
+            <p>
+              This portal provides access to the UHL CSAR-AI Study Human Healthcare
+              Worker Survey, which runs on a custom instance of the open-source
+              application
+              <a href="https://github.com/LimeSurvey/LimeSurvey" target="_blank" rel="noopener noreferrer">
+                LimeSurvey
+              </a>.
+            </p>
+
+            <p>
+              The aim of this study is to assess the performance of a GDPR-compliant
+              AI model, which we have trained to read and interpret handwritten
+              clinical notes. We fine-tuned this model by exposing it to thousands
+              of anonymised excerpts from clinical notes written by healthcare
+              workers at UHL.
+            </p>
+
+            <p>
+              We would like to compare the accuracy of this model against that of
+              human healthcare workers, in order to evaluate whether this type of
+              AI-assisted interpretation may have a role in improving the readability,
+              interpretation, and safe handling of handwritten clinical documentation.
+            </p>
+          </section>
+
+          <section id="participant-information">
+            <h2>Participant information</h2>
+
+            <p>
+              The participant information leaflet (PIL) explains the purpose of the
+              study, what participation involves, the specific data that will be
+              collected and how this data will be used.
+            </p>
+
+            <div class="callout">
+              If this is your first time visiting this page, please review the
+            <a href="CSAR-AI_PIL.pdf" target="_blank" rel="noopener noreferrer">
+                participant information leaflet (PIL)
+              </a>
+              before proceeding to the survey.
+            </div>
+          </section>
+
+          <section id="privacy-and-data">
+            <h2>Privacy and data</h2>
+
+            <p>
+                All respondent data will remain inside the secured LimeSurvey hosting
+                environment. Only data within the scope of the current study will be
+                collected. Any export, backup, retention, or deletion of participant
+                data will be conducted in a manner compliant with European GDPR legislation and
+                <a href="UL-DRP.pdf" target="_blank" rel="noopener noreferrer">
+                  local data retention policies
+                </a>.
+            </p>
+
+            <p>
+             <em>
+              This landing page is hosted via a
+              <a href="https://github.com/gpobyrne/limesurvey-portal" target="_blank" rel="noopener noreferrer">
+                publicically-accessible GitHub repository
+              </a>;
+
+
+                which is used to serve the website frontend only. This repository will not
+                be used to host respondent data, participant email lists, exported
+                survey responses, database credentials, or private configuration files.
+              </em>
+            </p>
+          </section>
+
+          <section id="support">
+            <h2>Support</h2>
+
+            <p>
+              If you have questions about the study, or experience issues with the
+              LimeSurvey platform, please feel free to contact the research team
+              using the details provided in the participant information document.
+            </p>
+          </section>
+
+          <section id="survey">
+            <h2>Survey</h2>
+
+            <div class="callout warning">
+              Before continuing: please ensure that you have read the participant
+              information document and are ready to proceed with the survey.
+            </div>
+
+            <p>
+              When you are ready, use the button below to open the LimeSurvey
+              questionnaire.
+            </p>
+
+            <div class="survey-action">
+              <a class="button-primary" href="https://limesurvey.uhl-research.site">
+                Take the survey
+              </a>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
