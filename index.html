@@ -54,6 +54,7 @@
     a {
       color: var(--link);
       text-decoration: none;
+      font-weight: 600;
     }
 
     a:hover {
@@ -66,52 +67,47 @@
       min-height: 100vh;
     }
 
+    /*
+      Decorative Bookdown-style sidebar.
+      Intentionally contains no visible text.
+    */
     .book-summary {
-      width: 310px;
+      width: 72px;
       background: var(--sidebar-bg);
       border-right: 1px solid var(--sidebar-border);
       position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
-      overflow-y: auto;
-      padding: 1.5rem 1.1rem;
     }
 
-    .summary {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .summary li {
-      margin: 0;
-      padding: 0;
-    }
-
-    .summary a {
+    .book-summary::before {
+      content: "";
       display: block;
-      padding: 0.5rem 0.6rem;
-      border-radius: 6px;
-      color: #333333;
-      font-size: 0.95rem;
+      width: 28px;
+      height: 28px;
+      margin: 1.5rem auto 0 auto;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.9;
     }
 
-    .summary a:hover {
-      background: #eeeeee;
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    .summary .active a {
-      background: var(--accent-light);
-      color: var(--accent);
-      font-weight: 700;
+    .book-summary::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 2px;
+      margin: 1.2rem auto 0 auto;
+      background: var(--sidebar-border);
+      box-shadow:
+        0 10px 0 var(--sidebar-border),
+        0 20px 0 var(--sidebar-border),
+        0 30px 0 var(--sidebar-border);
     }
 
     .book-body {
-      margin-left: 310px;
-      width: calc(100% - 310px);
+      margin-left: 72px;
+      width: calc(100% - 72px);
       min-height: 100vh;
       background: var(--main-bg);
     }
@@ -237,11 +233,7 @@
       }
 
       .book-summary {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid var(--sidebar-border);
+        display: none;
       }
 
       .book-body {
@@ -263,27 +255,7 @@
 <body>
   <div class="book">
 
-    <aside class="book-summary">
-      <nav role="navigation" aria-label="Table of contents">
-        <ul class="summary">
-          <li class="active">
-            #uhl-research-survey-portalUHL Research Survey Portal</a>
-          </li>
-          <li>
-            #participant-informationParticipant information</a>
-          </li>
-          <li>
-            #privacy-and-dataPrivacy and data</a>
-          </li>
-          <li>
-            #supportSupport</a>
-          </li>
-          <li>
-            #surveySurvey</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    <aside class="book-summary" aria-hidden="true"></aside>
 
     <main class="book-body">
       <header class="book-header" role="navigation">
@@ -327,7 +299,10 @@
 
             <div class="callout">
               If this is your first time visiting this page, please review the
-              participant information leaflet before proceeding to the survey.
+              CSAR-AI_PIL.pdf
+                participant information leaflet
+              </a>
+              before proceeding to the survey.
             </div>
           </section>
 
@@ -335,9 +310,13 @@
             <h2>Participant information</h2>
 
             <p>
-              The participant information leaflet explains the purpose of the study,
-              what participation involves, the voluntary nature of participation,
-              and how anonymised data will be handled.
+              The
+              CSAR-AI_PIL.pdf
+                participant information leaflet
+              </a>
+              explains the purpose of the study, what participation involves,
+              the voluntary nature of participation, and how anonymised data will
+              be handled.
             </p>
 
             <p>
@@ -368,7 +347,10 @@
                 All respondent data will remain inside the secured LimeSurvey hosting
                 environment and will be exported, backed up, retained, or deleted
                 according to GDPR legislation and standard local data retention
-                policies, as outlined within the participant information document.
+                policies, as outlined within the
+                CSAR-AI_PIL.pdf
+                  participant information document
+                </a>.
               </em>
             </p>
           </section>
@@ -379,7 +361,10 @@
             <p>
               If you have questions about the study, or experience issues with the
               LimeSurvey platform, please feel free to contact the research team
-              using the details provided in the participant information document.
+              using the details provided in the
+              CSAR-AI_PIL.pdf
+                participant information document
+              </a>.
             </p>
           </section>
 
@@ -387,8 +372,11 @@
             <h2>Survey</h2>
 
             <div class="callout warning">
-              Before continuing: please ensure that you have read the participant
-              information leaflet and are satisfied that you wish to continue.
+              Before continuing: please ensure that you have read the
+              CSAR-AI_PIL.pdf
+                participant information leaflet
+              </a>
+              and are satisfied that you wish to continue.
             </div>
 
             <p>
