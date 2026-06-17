@@ -6,12 +6,12 @@
 
   <title>UHL Research Survey Portal</title>
 
-  <meta name="description" content="Documentation and access portal for the UHL Research LimeSurvey instance.">
+  <meta name="description" content="Access portal for the UHL CSAR-AI Study Human Healthcare Worker Survey.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:title" content="UHL Research Survey Portal">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Documentation and access portal for the UHL Research LimeSurvey instance.">
+  <meta property="og:description" content="Access portal for the UHL CSAR-AI Study Human Healthcare Worker Survey.">
   <meta property="og:url" content="https://uhl-research.site/">
 
   <meta name="twitter:card" content="summary">
@@ -31,8 +31,8 @@
       --accent: #0057b8;
       --accent-light: #eaf2ff;
       --border: #dddddd;
-      --code-bg: #f3f4f6;
-      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --warning-bg: #fff7e8;
+      --warning-border: #a15c00;
     }
 
     * {
@@ -67,7 +67,7 @@
     }
 
     .book-summary {
-      width: 320px;
+      width: 310px;
       background: var(--sidebar-bg);
       border-right: 1px solid var(--sidebar-border);
       position: fixed;
@@ -75,57 +75,12 @@
       bottom: 0;
       left: 0;
       overflow-y: auto;
-      padding: 1.5rem 1.2rem;
-    }
-
-    .book-summary h2 {
-      font-size: 1.1rem;
-      margin: 0 0 0.25rem 0;
-      line-height: 1.3;
-    }
-
-    .book-summary .subtitle {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .sidebar-button,
-    .sidebar-button-secondary {
-      display: block;
-      margin: 0.75rem 0;
-      padding: 0.8rem 1rem;
-      text-align: center;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .sidebar-button {
-      background: var(--accent);
-      color: #ffffff !important;
-      box-shadow: 0 8px 20px rgba(0, 87, 184, 0.22);
-    }
-
-    .sidebar-button:hover {
-      background: var(--link-hover);
-      text-decoration: none;
-    }
-
-    .sidebar-button-secondary {
-      background: #ffffff;
-      color: var(--accent);
-      border: 1px solid var(--sidebar-border);
-    }
-
-    .sidebar-button-secondary:hover {
-      border-color: var(--accent);
-      text-decoration: none;
+      padding: 1.5rem 1.1rem;
     }
 
     .summary {
       list-style: none;
-      margin: 1.5rem 0 0 0;
+      margin: 0;
       padding: 0;
     }
 
@@ -136,7 +91,7 @@
 
     .summary a {
       display: block;
-      padding: 0.45rem 0.5rem;
+      padding: 0.5rem 0.6rem;
       border-radius: 6px;
       color: #333333;
       font-size: 0.95rem;
@@ -154,19 +109,9 @@
       font-weight: 700;
     }
 
-    .summary .section-label {
-      margin-top: 1rem;
-      padding: 0.45rem 0.5rem;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
     .book-body {
-      margin-left: 320px;
-      width: calc(100% - 320px);
+      margin-left: 310px;
+      width: calc(100% - 310px);
       min-height: 100vh;
       background: var(--main-bg);
     }
@@ -194,71 +139,31 @@
       padding: 3rem 2rem 5rem;
     }
 
-    .hero {
-      padding: 2.5rem;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-      margin-bottom: 3rem;
-      text-align: center;
+    .page-title {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero h1 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+    .page-title h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
       line-height: 1.1;
     }
 
-    .hero .date {
-      margin-top: 0.75rem;
+    .date {
+      margin: 0;
       color: var(--muted);
       font-style: italic;
     }
 
-    .hero p {
-      font-size: 1.08rem;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.75rem;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 0.9rem 1.35rem;
-      border-radius: 9px;
-      font-weight: 700;
-      border: 1px solid transparent;
-    }
-
-    .button-primary {
-      background: var(--accent);
-      color: #ffffff;
-    }
-
-    .button-primary:hover {
-      background: var(--link-hover);
-      color: #ffffff;
-      text-decoration: none;
-    }
-
     section {
       margin: 3rem 0;
-      padding-bottom: 1.5rem;
+      padding-bottom: 1.7rem;
       border-bottom: 1px solid #eeeeee;
     }
 
-    section:last-child {
+    section:last-of-type {
       border-bottom: none;
     }
 
@@ -268,9 +173,8 @@
       line-height: 1.2;
     }
 
-    h3 {
-      margin-top: 1.6rem;
-      font-size: 1.25rem;
+    p {
+      font-size: 1.03rem;
     }
 
     .callout {
@@ -282,16 +186,38 @@
     }
 
     .warning {
-      border-left-color: #a15c00;
-      background: #fff7e8;
+      border-left-color: var(--warning-border);
+      background: var(--warning-bg);
     }
 
-    code {
-      background: var(--code-bg);
-      padding: 0.15rem 0.35rem;
-      border-radius: 5px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.92em;
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    .survey-action {
+      text-align: center;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .button-primary {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      border: 1px solid transparent;
+      box-shadow: 0 8px 20px rgba(0, 87, 184, 0.22);
+    }
+
+    .button-primary:hover {
+      background: var(--link-hover);
+      color: #ffffff;
+      text-decoration: none;
     }
 
     .footer-nav {
@@ -303,11 +229,6 @@
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.95rem;
-    }
-
-    .small {
-      font-size: 0.92rem;
-      color: var(--muted);
     }
 
     @media (max-width: 860px) {
@@ -335,56 +256,30 @@
       .page-wrapper {
         padding: 2rem 1.25rem 4rem;
       }
-
-      .hero {
-        padding: 1.5rem;
-      }
     }
   </style>
 </head>
 
 <body>
   <div class="book">
+
     <aside class="book-summary">
-      <h2>UHL Research Survey Portal</h2>
-      <p class="subtitle">Documentation and access point for the LimeSurvey instance.</p>
-
-      <a class="sidebar-button" href="https://livesurvey.uhl-research.site">
-        Open Survey
-      </a>
-
-      researchers.html
-        Researchers
-      </a>
-
-      CSAR-AI_PIL.pdf
-        📄 View participant info leaflet
-      </a>
-
-      privacy-policy.html
-        Privacy Policy
-      </a>
-
       <nav role="navigation" aria-label="Table of contents">
         <ul class="summary">
           <li class="active">
-            #about-this-portalAbout this portal</a>
+            #uhl-research-survey-portalUHL Research Survey Portal</a>
           </li>
-
-          <li>
-            #take-the-surveyTake the survey</a>
-          </li>
-
           <li>
             #participant-informationParticipant information</a>
           </li>
-
           <li>
             #privacy-and-dataPrivacy and data</a>
           </li>
-
           <li>
             #supportSupport</a>
+          </li>
+          <li>
+            #surveySurvey</a>
           </li>
         </ul>
       </nav>
@@ -399,40 +294,40 @@
 
       <div class="page-wrapper" tabindex="-1" role="main">
         <article>
-          <div class="hero" id="about-this-portal">
+
+          <div class="page-title" id="uhl-research-survey-portal">
             <h1>UHL Research Survey Portal</h1>
-            <p class="date">
-              Last updated: 15 June 2026
-            </p>
-
-            <p>
-              This portal provides access to the UHL Research LimeSurvey study
-              and related participant information.
-            </p>
-
-            <p>
-              Please review the participant information leaflet before proceeding
-              to the survey.
-            </p>
-
-            <div class="actions">
-              <a class="button button-primary" href="https://livesurvey.uhl-research.site">
-                Open Survey
-              </a>
-            </div>
+            <p class="date">Last updated: 15 June 2026</p>
           </div>
 
-          <section id="take-the-survey">
-            <h2>Take the survey</h2>
+          <section>
+            <p>
+              This portal provides access to the UHL CSAR-AI Study Human Healthcare
+              Worker Survey, which runs on a custom instance of the open-source
+              application
+              https://github.com/LimeSurvey/LimeSurvey
+                LimeSurvey
+              </a>.
+            </p>
 
             <p>
-              When you are ready, use the button above or the sidebar link to open
-              the live LimeSurvey questionnaire.
+              The aim of this study is to assess the performance of a GDPR-compliant
+              AI model, which we have trained to read and interpret handwritten
+              clinical notes. We fine-tuned this model by exposing it to thousands
+              of anonymised excerpts from clinical notes written by healthcare
+              workers at UHL.
+            </p>
+
+            <p>
+              We would like to compare the accuracy of this model against that of
+              human healthcare workers, in order to evaluate whether this type of
+              AI-assisted interpretation may have a role in improving the readability,
+              interpretation, and safe handling of handwritten clinical documentation.
             </p>
 
             <div class="callout">
-              <strong>Before continuing:</strong>
-              please read the participant information leaflet and privacy policy.
+              If this is your first time visiting this page, please review the
+              participant information leaflet before proceeding to the survey.
             </div>
           </section>
 
@@ -447,7 +342,7 @@
 
             <p>
               CSAR-AI_PIL.pdf
-                📄 Download the participant information leaflet
+                📄 Click here to view participant information leaflet
               </a>
             </p>
           </section>
@@ -461,38 +356,58 @@
             </p>
 
             <p>
-              This repository should not contain respondent data, participant email
-              lists, exported survey responses, database credentials, SMTP passwords,
-              cPanel credentials, or private configuration files.
+              <em>
+                This repository will not contain respondent data, participant email
+                lists, exported survey responses, database credentials, SMTP passwords,
+                cPanel credentials, or private configuration files.
+              </em>
             </p>
 
-            <div class="callout warning">
-              <strong>Important:</strong>
-              all respondent data should remain inside the secured LimeSurvey hosting
-              environment and should be exported, backed up, retained, or deleted
-              according to the project data management plan.
-            </div>
+            <p>
+              <em>
+                All respondent data will remain inside the secured LimeSurvey hosting
+                environment and will be exported, backed up, retained, or deleted
+                according to GDPR legislation and standard local data retention
+                policies, as outlined within the participant information document.
+              </em>
+            </p>
           </section>
 
           <section id="support">
             <h2>Support</h2>
 
             <p>
-              If you have questions about the study, please refer to the participant
-              information leaflet or contact the research team using the details
-              provided in that document.
+              If you have questions about the study, or experience issues with the
+              LimeSurvey platform, please feel free to contact the research team
+              using the details provided in the participant information document.
+            </p>
+          </section>
+
+          <section id="survey">
+            <h2>Survey</h2>
+
+            <div class="callout warning">
+              Before continuing: please ensure that you have read the participant
+              information leaflet and are satisfied that you wish to continue.
+            </div>
+
+            <p>
+              When you are ready, use the button below to open the LiveSurvey
+              questionnaire.
             </p>
 
-            <p class="small">
-              If you are administering the survey, check the LimeSurvey admin panel,
-              iFastNet hosting status, DNS settings, and SSL/HTTPS configuration.
-            </p>
+            <div class="survey-action">
+              <a class="button-primary" href="https://livesurvey.uhl-research.site">
+                Take the survey
+              </a>
+            </div>
           </section>
 
           <nav class="footer-nav" aria-label="Footer navigation">
             <span>UHL Research Survey Portal</span>
-            #about-this-portalBack to top</a>
+            #uhl-research-survey-portalBack to top</a>
           </nav>
+
         </article>
       </div>
     </main>
