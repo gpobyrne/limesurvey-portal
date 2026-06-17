@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>UHL Research Survey Portal</title>
+  <title>UHL CSAR-AI Portal</title>
 
   <meta name="description" content="Access portal for the UHL CSAR-AI Study Human Healthcare Worker Survey.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -181,6 +181,52 @@
       margin: 1.5rem 0;
     }
 
+    .study-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+    }
+
+.study-info-table th,
+.study-info-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+.study-info-table th {
+  width: 28%;
+  background: var(--accent-light);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.study-info-table tr:last-child th,
+.study-info-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .study-info-table,
+  .study-info-table tbody,
+  .study-info-table tr,
+  .study-info-table th,
+  .study-info-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .study-info-table th {
+    border-bottom: none;
+  }
+
+  .study-info-table td {
+    border-bottom: 1px solid var(--border);
+  }
+}
     .warning {
       border-left-color: var(--warning-border);
       background: var(--warning-bg);
@@ -250,7 +296,6 @@
       }
     }
   </style>
-</head>
 
 <body>
   <div class="book">
@@ -258,17 +303,11 @@
     <aside class="book-summary" aria-hidden="true"></aside>
 
     <main class="book-body">
-      <header class="book-header" role="navigation">
-        <h1>
-          #uhl-research-survey-portalUHL Research Survey Portal</a>
-        </h1>
-      </header>
-
       <div class="page-wrapper" tabindex="-1" role="main">
         <article>
 
           <div class="page-title" id="uhl-research-survey-portal">
-            <h1>UHL Research Survey Portal</h1>
+            <h1>UHL CSAR-AI Study</h1>
             <p class="date">Last updated: 15 June 2026</p>
           </div>
 
@@ -301,6 +340,26 @@
           <section id="participant-information">
             <h2>Participant information</h2>
 
+<table class="study-info-table">
+  <tbody>
+    <tr>
+      <th scope="row">Study title</th>
+      <td>
+        A Comparative Study of the Accuracy and Reliability of Artificial Intelligence
+        Large Language Models Versus Human Healthcare Workers in the Interpretation
+        of Handwritten Medical Notes (CSAR-AI).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Study Ref</th>
+      <td>0392</td>
+    </tr>
+    <tr>
+      <th scope="row">Ethical Status</th>
+      <td>Approved by UHL Research Ethics Committee, 26 January 2026.</td>
+    </tr>
+  </tbody>
+</table>     
             <p>
               The participant information leaflet (PIL)
               explains the purpose of the study, what participation involves, 
@@ -333,15 +392,17 @@
             </p>
 
             <p>
-              <em>
                 This landing page is hosted via
                 <a href="https://github.com/gpobyrne/limesurvey-portal" target="_blank" rel="noopener noreferrer">
                   personal GitHub repository
                 </a>.
+              
+              <em>  
                 This repository serves the website frontend only, and will not
                 be used to host respondent data, participant email lists, exported
                 survey responses, database credentials, or private configuration files.
               </em>
+              
             </p>
           </section>
 
